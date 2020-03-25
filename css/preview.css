@@ -13,7 +13,7 @@ main
    transform: translateX(-50%);
 }
 
-img
+.container img
 {
    display: block;
    margin: 0 auto;

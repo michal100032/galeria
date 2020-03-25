@@ -1,11 +1,12 @@
-const urlParams = new URLSearchParams(window.location.search);
-let theme = urlParams.get("theme");
+let theme = localStorage.getItem('theme');
 
 const themeChanger = document.getElementById('theme');
-const a = document.querySelectorAll('a');
 
 if(!theme)
+{
+   localStorage.setItem('theme', 'dark');
    theme = 'dark';
+}
 
 updateTheme();
 
@@ -33,6 +34,7 @@ function updateTheme()
       document.body.classList.remove('dark');
       themeChanger.innerHTML = `<i class="icon-sun-inv"></i>`;
    }
+   localStorage.setItem('theme', theme);
 }
 
 function redirect(event)
@@ -53,12 +55,6 @@ function redirect(event)
 
    
 }
-
-for(var i = 0; i < a.length; i++)
-{
-   a[i].addEventListener("click", redirect);
-}
-
 
 themeChanger.addEventListener('click',changeTheme);
 

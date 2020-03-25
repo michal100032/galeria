@@ -37,6 +37,8 @@ body
 
 header
 {
+	position: relative;
+
 	height:10vh;
 	background: var(--header);
 	line-height:10vh;
@@ -45,6 +47,34 @@ header
 
 	transition: background 0.3s, color, 0.3s;
 }
+
+header > img
+{
+	position: absolute; 
+	
+	/* LOGO 1*/
+	/*
+		top:50%;
+		left: calc(2vw + 10px);
+		display: block;
+		height: 9vh;
+
+		transform: translateY(-50%);
+	*/
+	/* LOGO 2 */
+	top:0;
+	left:0;
+	height:10vh;
+}
+
+header div:first-of-type
+{
+	position: absolute;
+	top: 50%;
+	left: calc(10% + 125px);
+	transform: translateY(-50%);
+}
+
 #theme
 {
 	position: absolute;
@@ -167,6 +197,11 @@ footer span
 /* Phones */
 @media only screen and (max-width: 650px)
 {
+	header
+	{
+		font-size:16px;
+	}
+
 	nav
 	{
 		height: 25vh;
