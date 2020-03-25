@@ -1,5 +1,6 @@
 let theme = localStorage.getItem('theme');
 
+const logo = document.getElementById('logo');
 const themeChanger = document.getElementById('theme');
 
 if(!theme)
@@ -35,25 +36,7 @@ function updateTheme()
       themeChanger.innerHTML = `<i class="icon-sun-inv"></i>`;
    }
    localStorage.setItem('theme', theme);
-}
-
-function redirect(event)
-{
-   if(event.target.href.indexOf('theme') >= 0)
-      return;
-
-   event.preventDefault();
-
-   if(event.target.href.indexOf('?') >= 0)
-   {
-      window.location.href = event.target.href + "&theme="+theme;
-   }
-   else
-   {
-      window.location.href = event.target.href + "?theme="+theme;
-   }
-
-   
+   logo.src = theme == "dark" ? "logo2.png" : "logo.png";
 }
 
 themeChanger.addEventListener('click',changeTheme);

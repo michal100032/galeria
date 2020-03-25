@@ -48,6 +48,30 @@ header
 	transition: background 0.3s, color, 0.3s;
 }
 
+/*
+header > img[src="logo.jpg"]
+{
+	position: absolute; 
+	
+	/* LOGO 1*/
+	/*
+		top:50%;
+		left: calc(2vw + 10px);
+		display: block;
+		height: 9vh;
+
+		transform: translateY(-50%);
+	*/
+	/* LOGO 2 */
+	/*
+	top:0;
+	left:0;
+	height:10vh;
+	/
+}
+
+*/
+
 header > img
 {
 	position: absolute; 
