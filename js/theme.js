@@ -44,14 +44,14 @@ function redirect(event)
 
    if(event.target.href.indexOf('?') >= 0)
    {
-      event.target.href += "&theme="+theme;
+      window.location.href = event.target.href + "&theme="+theme;
    }
    else
    {
-      event.target.href += "?theme="+theme;
+      window.location.href = event.target.href + "?theme="+theme;
    }
 
-   window.location.href = event.target.href;
+   
 }
 
 for(var i = 0; i < a.length; i++)

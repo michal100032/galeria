@@ -87,3 +87,31 @@ a.image
 	text-decoration: none;
 	display: block;
 }
+
+@media only screen and (max-width: 1350px) 
+{
+	.images 
+	{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.images figure
+	{
+		height: 26vw;
+	}
+}
+
+@media only screen and (max-width: 650px) 
+{
+	.images 
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.images figure
+	{
+		margin: 10px 0;
+		width: 100vw;
+		height: 50vw;
+	}
+}

@@ -5,9 +5,8 @@ main
 }
 .container
 {
-   padding: 2vmax 1vmax;
-   background-color: rgba(0,0,0, 0.25);
-   width:70vw;
+   padding: 5vw;
+   width:60vw;
    position:absolute;
    top: 25px;
    left:50%;
@@ -44,4 +43,33 @@ p
    padding: 0 7.5%;
    font-size: 20px;
    line-height: 23px;
+}
+/* Phones */
+@media only screen and (max-width: 670px)
+{
+	nav
+	{
+		height: 25vh;
+		flex-direction: column;
+
+		position: static;
+	}
+
+	nav > *
+	{
+		box-sizing: border-box;
+		text-align: left;
+		padding-left: 35vw;
+		height: 5vh;
+		width: 100%;
+	}
+
+	footer > div
+	{
+		width: 100%;
+	}
+	footer span
+	{
+		font-size: 15px;
+	}
 }
