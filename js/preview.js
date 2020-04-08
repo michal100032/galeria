@@ -5,6 +5,18 @@ const des = document.getElementById('description');
 
 const title = document.querySelector('title');
 
+/*
+	tu działasz
+	pamiętaj o przecinkach
+	w nazwie zdjęcia nie może być polskich znaków
+	mogą być tylko w tekstach w cudzysłowiach
+	
+	nazwa_zdjecia: {
+		author: "autor",
+		title: "tytuł",
+		description: "opis"
+	},
+*/
 const data = {
    fheavy: {
       author: "Kuba",
@@ -13,7 +25,7 @@ const data = {
    },
    field: {
       author: "Natalia",
-      title: "Pole",
+      title: "OGsaksahns",
       description: "Piękne pole."
    },
    impresja: {
@@ -25,8 +37,14 @@ const data = {
       author: "Michał",
       title: "Long March 5",
       description: "Taka chińska rakieta."
-   }
+   },
+   slonce: {
+      author: "Michał",
+      title: "Long March 5",
+      description: "Taka asaa rakieta."
+   },
 }
+
 
 window.addEventListener('load', () => {
    const urlParams = new URLSearchParams(window.location.search);
